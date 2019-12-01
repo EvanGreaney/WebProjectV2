@@ -37,7 +37,7 @@ class Edit extends React.Component{
                   year: this.state.Year,
                   Image: this.state.Image
                 };
-            axios.put("http://localhost:4000/api/cars" + this.state._id, 
+            axios.put("http://localhost:4000/api/cars/" + this.state._id, 
             newCar)
             .then()
             .catch();
