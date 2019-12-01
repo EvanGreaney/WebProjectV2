@@ -26,11 +26,11 @@ class CarItem extends React.Component{
         return(
            <div>
 
-  <Card  border="primary" style={{ width: '28rem' }}>
+  <Card border="primary" style={{ width: '28rem' }} width = "2000" height = "2500">
   <Card.Header>{this.props.car.Model}</Card.Header>
   <Card.Body>
     <blockquote className="blockquote mb-0">
-    <img src={this.props.car.Image}></img>
+    <img src={this.props.car.Image} ></img>
       <footer>
       {this.props.car.year}
       </footer>

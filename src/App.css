@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .App-logo {
@@ -20,3 +22,13 @@
 .App-link {
   color: #09d3ac;
 }
+
+body {
+  background-color: #00008b;
+  color: rgba(9, 2, 41, 0.199);
+  padding: 10px;
+  font-family: Arial;
+  text-align: center;
+}
+
+

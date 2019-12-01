@@ -32,7 +32,13 @@ const carschema = new Schema({
     Image:String
 })
 
+const queryschema = new Schema({
+    Qeury:String,
+    Email:String
+})
+
 const CarModel = mongoose.model('car', carschema);
+const QueryModel = mongoose.model('query', queryschema);
 
 app.get('/test', (req, res) => {
     res.sendFile(path.join(__dirname + '/index.html'));
@@ -83,6 +89,19 @@ app.get('/api/cars', (req, res) => {
             Model:req.body.Model, 
             year:req.body.year, 
             Image:req.body.Image
+        });
+    
+        res.json('post recieved!');
+    })
+
+    app.post('/api/queries', (req,res)=>{
+        console.log('Post request Successful');
+        console.log(req.body.Query);
+        console.log(req.body.Email);
+    
+        QueryModel.create({
+            Query:req.body.Query, 
+            Email:req.body.Email, 
         });
     
         res.json('post recieved!');

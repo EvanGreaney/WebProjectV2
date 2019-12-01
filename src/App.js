@@ -9,6 +9,7 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import Addcar from './components/addcar';
 import Carcat from './components/carcat';
 import Edit from './components/edit';
+import SubmitQuery from './components/SubmitQeury';
 
 
 class App extends React.Component {
@@ -22,6 +23,7 @@ class App extends React.Component {
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/addcar">Add Car</Nav.Link>
               <Nav.Link href="/carcat">Car Catalogue</Nav.Link>
+              <Nav.Link href="/SubmitQeury">Car Queries</Nav.Link>
             </Nav>
           </Navbar>
           <Switch>
@@ -29,6 +31,7 @@ class App extends React.Component {
             <Route path="/addcar" component={Addcar} />
             <Route path="/carcat" component={Carcat} />
             <Route path="/edit/:id" component={Edit} />
+            <Route path="/SubmitQeury" component={SubmitQuery} />
           </Switch>
         </div>
       </BrowserRouter>
